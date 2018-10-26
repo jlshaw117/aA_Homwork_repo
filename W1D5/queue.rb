@@ -9,7 +9,7 @@ class Queue
   end
 
   def dequeue
-
+    @queue.shift
   end
 
   def peek
