@@ -13,7 +13,7 @@ class Queue
   end
 
   def peek
-
+    @queue[0]
   end
 
 end
