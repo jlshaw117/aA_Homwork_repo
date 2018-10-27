@@ -40,11 +40,12 @@ class Simon
   end
 
   def round_success_message
-
+    puts "You guessed right, moving on to next round"
   end
 
   def game_over_message
-
+    puts "That was the wrong sequence. Game over"
+    puts "The last correct sequence length was #{sequence_length}."
   end
 
   def reset_game
