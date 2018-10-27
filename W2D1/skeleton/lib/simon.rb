@@ -25,12 +25,18 @@ class Simon
     unless @game_over
       round_success_message
       @sequence_length += 1
+      sleep(2)
     end
   end
 
   def show_sequence
+    system "clear"
     add_random_color
-    puts "#{seq}"
+    seq.each do |color|
+      puts color
+      sleep(1)
+      system "clear"
+    end
   end
 
   def require_sequence
