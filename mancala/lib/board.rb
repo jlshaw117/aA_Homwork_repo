@@ -7,16 +7,21 @@ class Board
       if i == 6 || i == 13
         cup
       else
-        [:stone, :stone, :stone, :stone]
+        place_stones
       end
     end
   end
 
   def place_stones
     # helper method to #initialize every non-store cup with four stones each
+    result = []
+    4.times {result << :stone}
+    result
   end
 
   def valid_move?(start_pos)
+    raise 'Invalid starting cup' unless (0..12).include?(start_pos)
+    raise 'Starting cup is empty' if cups[start_pos].empty?
   end
 
   def make_move(start_pos, current_player_name)
