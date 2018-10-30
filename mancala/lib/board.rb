@@ -71,7 +71,11 @@ class Board
   end
 
   def one_side_empty?
-  
+    if cups[0..5].all? {|cup| cup.empty?} || cups[7..12].all? {|cup| cup.empty?}
+      true
+    else
+      false
+    end
   end
 
   def winner
