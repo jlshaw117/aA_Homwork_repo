@@ -1,4 +1,4 @@
-require "byebug"
+
 class Simon
   COLORS = %w(red blue green yellow)
 
