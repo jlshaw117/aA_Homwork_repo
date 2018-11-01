@@ -48,10 +48,33 @@ def slow_dance(str, arr)
   end
 end
 
+def constan_dance(str, hash)
+  hash[str]
+end
+
 if __FILE__ == $PROGRAM_NAME
   fishes = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
 
   puts sluggish_octopus(fishes)
   puts dominant_octopus(fishes).last
   puts clever_octopus(fishes)
+
+  tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
+
+  puts slow_dance("up", tiles_array)
+  puts slow_dance("right-down", tiles_array)
+
+  tiles_hash = {
+    "up" => 0,
+    "right-up" => 1,
+    "right" => 2,
+    "right-down" => 3,
+    "down" => 4,
+    "left-down" => 5,
+    "left" => 6,
+    "left-up" => 7
+  }
+
+  puts constan_dance("up", tiles_hash)
+  puts constan_dance("right-down", tiles_hash)
 end
