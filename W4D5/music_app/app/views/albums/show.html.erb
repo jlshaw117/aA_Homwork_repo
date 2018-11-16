@@ -1,0 +1,9 @@
+<h1><%= @album.title %></h1>
+  <br>
+<ul>
+  <li>Band: <%= Band.find(@album.band_id).name %></li>
+  <br>
+  <li>Year: <%= @album.yr %></li>
+  <br>
+  <li><%= @album.live ? "Live" : "Studio" %></li>
+</ul>
