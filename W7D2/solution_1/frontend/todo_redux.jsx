@@ -35,4 +35,8 @@ function addLoggingToDispatch(store) {
       console.log(store.getState());
     };
   };
-};
+}
+
+function applyMiddlewares (store, middleWares) {
+  let 
+}
